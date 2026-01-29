@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokéLab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> PokéLab </h1>
+        <p>Escolha seu Pokémon inicial e deixe o PokéLab montar seu time perfeito!</p>
+    </header>
+
+    <main>
+        <section id="escolha-inicial">
+            <h2>Escolha seu Pokémon Inicial</h2>
+            <div class="regioes">
+                
+                <div class="regiao">
+                    <h3>Kanto</h3>
+                    <div class="pokemon-opcoes" id="kanto-iniciais">
+                        <div class="pokemon-card" data-pokemon-id="bulbasaur">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur">
+                            <span>Bulbasaur</span>
+                        </div>
+                        <div class="pokemon-card" data-pokemon-id="charmander">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander">
+                            <span>Charmander</span>
+                        </div>
+                        <div class="pokemon-card" data-pokemon-id="squirtle">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle">
+                            <span>Squirtle</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiao">
+                    <h3>Johto</h3>
+                    <div class="pokemon-opcoes" id="johto-iniciais">
+                        <div class="pokemon-card" data-pokemon-id="chikorita">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png" alt="Chikorita">
+                            <span>Chikorita</span>
+                        </div>
+                        <div class="pokemon-card" data-pokemon-id="cyndaquil">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png" alt="Cyndaquil">
+                            <span>Cyndaquil</span>
+                        </div>
+                        <div class="pokemon-card" data-pokemon-id="totodile">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png" alt="Totodile">
+                            <span>Totodile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiao">
+                    <h3>Hoenn</h3>
+                    <div class="pokemon-opcoes" id="hoenn-iniciais">
+                        <div class="pokemon-card" data-pokemon-id="treecko">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png" alt="Treecko">
+                            <span>Treecko</span>
+                        </div>
+                        <div class="pokemon-card" data-pokemon-id="torchic">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/255.png" alt="Torchic">
+                            <span>Torchic</span>
+                        </div>
+                        <div class="pokemon-card" data-pokemon-id="mudkip">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/258.png" alt="Mudkip">
+                            <span>Mudkip</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiao">
+                    <h3>Sinnoh</h3>
+                    <div class="pokemon-opcoes" id="sinnoh-iniciais">
+                        <div class="pokemon-card" data-pokemon-id="turtwig">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/387.png" alt="Turtwig">
+                            <span>Turtwig</span>
+                        </div>
+                        <div class="pokemon-card" data-pokemon-id="chimchar">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/390.png" alt="Chimchar">
+                            <span>Chimchar</span>
+                        </div>
+                        <div class="pokemon-card" data-pokemon-id="piplup">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/393.png" alt="Piplup">
+                            <span>Piplup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regiao">
+                    <h3>Especiais</h3>
+                    <div class="pokemon-opcoes" id="especiais-iniciais">
+                        <div class="pokemon-card" data-pokemon-id="pikachu">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+                            <span>Pikachu</span>
+                        </div>
+                        <div class="pokemon-card" data-pokemon-id="eevee">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="Eevee">
+                            <span>Eevee</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="pokemon-description-area">
+                <h3>Informações do Pokémon:</h3>
+                <div id="description-content">
+                    <p>Passe o mouse ou clique em um Pokémon para ver sua descrição e tipo aqui.</p>
+                </div>
+            </div>
+            
+            <button id="gerar-time-btn" disabled>Gerar Meu Time PokéLab!</button>
+        </section>
+
+        <section id="time-gerado" class="hidden">
+            <h2>Seu Time PokéLab!</h2>
+            <div id="equipe-cards">
+                </div>
+            <button id="reset-btn">Escolher Outro Inicial</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PokéLab - Desenvolvido por: Esdras Israel</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

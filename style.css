@@ -1,0 +1,383 @@
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+    background: radial-gradient(circle at top left, #fcfcfc 0%, #fffacd 100%); 
+    color: #333;
+    text-align: center;
+}
+
+
+
+header {
+    background-color: #3C5AA6; 
+    color: #fff;
+    padding: 25px 0;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-size: 3.5em; 
+    margin: 0;
+    color: #FFCB05; 
+    /* Sombra mais forte para o título */
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.9); 
+    letter-spacing: 3px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+main {
+    padding: 30px;
+    max-width: 1250px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 18px;
+    
+}
+
+
+h2 {
+    color: #cc0000; 
+    border-bottom: 3px solid #FFCB05;
+    padding-bottom: 12px;
+    margin-bottom: 35px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 1px #eee;
+}
+
+
+
+.regioes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.regiao {
+    
+    background-color: #f7f7f7; 
+    border: 4px solid #FFCB05; 
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    min-width: 320px;
+    max-width: 400px;
+    transition: all 0.4s ease-in-out;
+}
+
+.regiao:hover {
+    border-color: #cc0000; 
+    transform: translateY(-8px) scale(1.03); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.regiao h3 {
+    color: #3C5AA6; 
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 2em;
+    border-bottom: 2px dashed #2A75BB;
+    padding-bottom: 10px;
+}
+
+.pokemon-opcoes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+
+.pokemon-card {
+    cursor: pointer;
+    
+    border: 5px solid #2A75BB; 
+    border-radius: 15px;
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+    background-color: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px; 
+    height: 140px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+}
+
+.pokemon-card:hover {
+    border-color: #4CAF50; 
+    transform: scale(1.1); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+.pokemon-card.selected {
+    border-color: #FFCB05; 
+    background-color: #ffffe0; 
+    box-shadow: 0 0 25px rgba(255, 203, 5, 1); 
+    transform: scale(1.15); 
+}
+
+.pokemon-card img {
+    width: 100px; 
+    height: 100px; 
+    image-rendering: pixelated; 
+    margin-bottom: 10px;
+}
+
+.pokemon-card span {
+    font-weight: bold;
+    color: #3C5AA6; 
+    font-size: 1.2em; 
+}
+
+
+
+#pokemon-description-area {
+    
+    background: linear-gradient(135deg, #e1f5fe, #c7e5ff); 
+    border: 4px solid #2A75BB;
+    border-radius: 18px;
+    padding: 30px;
+    margin-top: 50px;
+    text-align: left;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#pokemon-description-area h3 {
+    color: #3C5AA6;
+    margin-top: 0;
+    border-bottom: 1px solid #cce;
+    padding-bottom: 10px;
+}
+
+#description-content .pokemon-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#description-content .pokemon-info img {
+    width: 100px;
+    height: 100px;
+    image-rendering: pixelated;
+    border: 5px solid #FFCB05; 
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(255, 203, 5, 0.8);
+}
+
+#description-content .pokemon-details {
+    text-align: left;
+}
+
+#description-content .pokemon-details h4 {
+    color: #cc0000; /* Nome do Pokémon em vermelho forte */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-size: 1.8em;
+    margin: 0 0 8px 0;
+}
+
+#description-content .pokemon-details p {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.type-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    margin-right: 5px;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Cores dos tipos */
+.type-normal { background-color: #A8A77A; }
+.type-fire { background-color: #EE8130; }
+.type-water { background-color: #6390F0; }
+.type-grass { background-color: #7AC74C; }
+.type-electric { background-color: #F7D02C; }
+.type-ice { background-color: #96D9D6; }
+.type-fighting { background-color: #C22E28; }
+.type-poison { background-color: #A33EA1; }
+.type-ground { background-color: #E2BF65; }
+.type-flying { background-color: #A98FF3; }
+.type-psychic { background-color: #F95587; }
+.type-bug { background-color: #A6B91A; }
+.type-rock { background-color: #B6A136; }
+.type-ghost { background-color: #735797; }
+.type-dragon { background-color: #6F35FC; }
+.type-steel { background-color: #B7B7CE; }
+.type-fairy { background-color: #D685AD; }
+
+/* ------------------ BOTÕES ------------------ */
+
+#gerar-time-btn, #reset-btn {
+    background-color: #2A75BB; 
+    color: white;
+    padding: 20px 40px;
+    border: 4px solid #3C5AA6;
+    border-radius: 12px;
+    font-size: 1.4em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#gerar-time-btn:hover:not(:disabled), #reset-btn:hover {
+    background-color: #1A5E95;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+#gerar-time-btn:disabled {
+    background-color: #cccccc;
+    border-color: #aaaaaa;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Botão de Reset (Vermelho Forte) */
+#reset-btn {
+    background-color: #cc0000; 
+    border-color: #990000;
+    margin-top: 20px;
+}
+
+#reset-btn:hover {
+    background-color: #990000;
+}
+
+/* ------------------ TIME GERADO ------------------ */
+
+#time-gerado {
+    margin-top: 50px;
+    padding-top: 30px;
+    /* Linha tracejada amarela */
+    border-top: 4px dashed #FFCB05;
+}
+
+#time-gerado h2 {
+    color: #3C5AA6;
+}
+
+/* AJUSTE CRUCIAL: Exibe os cards do time em linha */
+#equipe-cards {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 25px; 
+    margin-top: 30px;
+    padding: 20px 0; 
+    border: 1px dashed #ddd; 
+    border-radius: 10px;
+}
+
+.pokemon-team-card {
+    border: 3px solid #2A75BB;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 170px; /* Cards do time maiores */
+    transition: transform 0.3s;
+}
+
+.pokemon-team-card:hover {
+    transform: scale(1.05);
+}
+
+.pokemon-team-card img {
+    width: 100px;
+    height: 100px;
+    image-rendering: pixelated;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.pokemon-team-card h4 {
+    margin: 0 0 5px 0;
+    color: #3C5AA6;
+    font-size: 1.3em;
+}
+
+.pokemon-team-card .types {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ------------------ RODAPÉ ------------------ */
+
+footer {
+    background-color: #3C5AA6;
+    color: #FFCB05;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+    box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ------------------ RESPONSIVIDADE ------------------ */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    .regioes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .regiao {
+        min-width: unset;
+        width: 95%;
+    }
+    .pokemon-opcoes {
+        justify-content: space-around;
+    }
+    .pokemon-card {
+        width: 100px;
+        height: 120px;
+    }
+    .pokemon-card img {
+        width: 80px;
+        height: 80px;
+    }
+    #description-content .pokemon-info {
+        flex-direction: column;
+        text-align: center;
+    }
+}
